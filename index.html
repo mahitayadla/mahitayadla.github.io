@@ -6,76 +6,88 @@
 <title>Portfolio</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #e8f3e8 0%, #d4e7d4 100%);
-    color: #3d5a3d;
+    background: #D8DFE6; /* main background */
+    color: #2C3E50; /* text color */
     min-height: 100vh;
 }
+
 body::before {
     content: '';
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
     background-image: 
-        radial-gradient(circle at 20% 30%, rgba(139,176,139,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(119,159,119,0.08) 0%, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(44,62,80,0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(44,62,80,0.03) 0%, transparent 50%);
     z-index: -1;
 }
-.hero { 
+
+.hero {
     padding: 60px 20px; 
     text-align: center; 
-    background: rgba(255,255,255,0.7); 
+    background: rgba(255,255,255,0.85); 
     backdrop-filter: blur(10px); 
-    border-bottom: 2px solid rgba(139,176,139,0.2);
+    border-bottom: 2px solid rgba(44,62,80,0.2);
 }
+
 .hero h1 { 
     font-size: 3em; 
     margin-bottom: 15px; 
-    color: #5a7a5a; 
+    color: #2C3E50; 
     font-weight: 700; 
 }
+
 .hero p { 
     font-size: 1.2em; 
-    color: #6b8e6b; 
+    color: #34495E; 
     font-weight: 400; 
 }
+
 .container { 
     max-width: 1200px; 
     margin: 0 auto; 
     padding: 60px 20px; 
 }
+
 .about-section {
     background: white; 
-    padding: 15px 20px; /* reduced padding */
+    padding: 25px; 
     border-radius: 16px; 
     margin-bottom: 60px; 
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08); 
-    border-left: 5px solid #8bb08b; 
+    box-shadow: 0 8px 30px rgba(44,62,80,0.08); 
+    border-left: 5px solid #34495E; 
 }
+
 .about-section h2 { 
     font-size: 2.2em; 
-    color: #5a7a5a; 
+    color: #2C3E50; 
     margin-bottom: 15px; 
     font-weight: 600; 
 }
+
 .about-section p { 
-    font-size: 1em; 
-    line-height: 1.4; 
-    color: #6b8e6b; 
+    font-size: 1.05em; 
+    line-height: 1.5; 
+    color: #34495E; 
 }
+
 .section-header { 
     text-align: center; 
     margin-bottom: 50px; 
 }
+
 .section-header h2 { 
     font-size: 2.5em; 
-    color: #5a7a5a; 
+    color: #2C3E50; 
     margin-bottom: 10px; 
     font-weight: 600; 
     position: relative; 
     display: inline-block; 
 }
+
 .section-header h2::after { 
     content: ''; 
     position: absolute; 
@@ -84,14 +96,10 @@ body::before {
     transform: translateX(-50%); 
     width: 80px; 
     height: 4px; 
-    background: linear-gradient(90deg, #8bb08b, #779f77); 
+    background: #34495E; 
     border-radius: 2px; 
 }
-.section-header p { 
-    color: #6b8e6b; 
-    font-size: 1.1em; 
-    margin-top: 20px; 
-}
+
 .filter-container { 
     display: flex; 
     justify-content: center; 
@@ -99,40 +107,45 @@ body::before {
     margin-bottom: 50px; 
     flex-wrap: wrap; 
 }
+
 .filter-btn { 
     padding: 12px 30px; 
-    border: 2px solid #c9dcc9; 
+    border: 2px solid #c9c9c9; 
     background: white; 
-    color: #5a7a5a; 
+    color: #2C3E50; 
     border-radius: 25px; 
     cursor: pointer; 
     font-size: 1em; 
     font-weight: 600; 
     transition: all 0.3s; 
-    box-shadow: 0 3px 10px rgba(139,176,139,0.1);
+    box-shadow: 0 3px 10px rgba(44,62,80,0.1);
 }
+
 .filter-btn:hover { 
-    background: #f0f7f0;
-    border-color:#8bb08b; 
+    background: #e2e8ed;
+    border-color:#34495E; 
     transform: translateY(-3px); 
-    box-shadow: 0 5px 20px rgba(139,176,139,0.2);
+    box-shadow: 0 5px 20px rgba(44,62,80,0.2);
 }
+
 .filter-btn.active { 
-    background: linear-gradient(135deg, #8bb08b, #779f77); 
+    background: #34495E; 
     color:white; 
     border-color:transparent; 
-    box-shadow:0 5px 20px rgba(139,176,139,0.3); 
+    box-shadow:0 5px 20px rgba(44,62,80,0.3); 
 }
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
+
 .project-card {
     background:white; 
     border-radius:16px; 
     padding:20px; 
-    box-shadow:0 8px 25px rgba(0,0,0,0.1); 
+    box-shadow:0 8px 25px rgba(44,62,80,0.1); 
     transition: all 0.4s ease; 
     border:2px solid transparent; 
     position:relative; 
@@ -140,6 +153,7 @@ body::before {
     display: flex; 
     flex-direction: column;
 }
+
 .project-card::before { 
     content:''; 
     position:absolute; 
@@ -147,98 +161,93 @@ body::before {
     left:0; 
     width:100%; 
     height:4px; 
-    background: linear-gradient(90deg,#8bb08b,#779f77); 
+    background: #34495E; 
     transform:scaleX(0); 
     transition: transform 0.4s;
 }
+
 .project-card:hover { 
     transform:translateY(-5px); 
-    box-shadow:0 12px 30px rgba(139,176,139,0.2); 
-    border-color:#8bb08b;
+    box-shadow:0 12px 30px rgba(44,62,80,0.2); 
+    border-color:#34495E;
 }
+
 .project-card:hover::before { 
     transform:scaleX(1);
 }
-.project-header { 
-    display: flex; 
-    align-items: center; 
-    margin-bottom: 10px; 
-}
-.project-icon { 
-    width:40px; 
-    height:40px; 
-    background: linear-gradient(135deg,#8bb08b,#779f77); 
-    border-radius:12px; 
-    display:flex; 
-    align-items:center; 
-    justify-content:center; 
-    font-size:1.3em; 
-    margin-right:10px; 
-    box-shadow:0 4px 15px rgba(139,176,139,0.3); 
-    flex-shrink: 0; 
-}
+
 .project-card h3 { 
     font-size:1.1em; 
-    color:#5a7a5a; 
+    color:#2C3E50; 
     font-weight:600; 
 }
+
 .project-card p { 
-    color:#6b8e6b; 
+    color:#34495E; 
     line-height:1.5; 
     margin-bottom:15px; 
 }
-.project-tags { 
-    display:flex; 
-    flex-wrap:wrap; 
-    gap:8px; 
-    margin-bottom:15px; 
-}
-.tag { 
-    background:#f0f7f0; 
+
+.project-tags .tag { 
+    background:#e2e8ed; 
     padding:6px 14px; 
     border-radius:15px; 
     font-size:0.85em; 
-    color:#5a7a5a; 
-    border:1px solid #c9dcc9; 
+    color:#2C3E50; 
+    border:1px solid #c9c9c9; 
     font-weight:500; 
 }
-.project-links { 
-    display: flex; 
-    gap: 10px; 
-}
-.project-link { 
+
+.project-links .project-link { 
     display:inline-block;
-    background: linear-gradient(135deg,#8bb08b,#779f77); 
+    background: #34495E; 
     color:white; 
     padding:10px 20px; 
     border-radius:25px; 
     text-decoration:none; 
     transition:all 0.3s; 
     font-weight:600; 
-    box-shadow:0 4px 15px rgba(139,176,139,0.3);
 }
-.project-link:hover { 
+
+.project-links .project-link:hover { 
+    background: #2C3E50; 
     transform:translateY(-2px); 
-    box-shadow:0 6px 20px rgba(139,176,139,0.4); 
 }
+
 .hidden { display:none; }
+
 footer { 
-    background:#4a6a4a; 
+    background:#2C3E50; 
     color:white; 
     text-align:center; 
     padding:40px 20px; 
     margin-top:60px; 
 }
-footer h3 { margin-bottom:20px; font-weight:600; }
-footer div { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-footer a { color:#c9dcc9; text-decoration:none; margin:0 15px; transition: all 0.3s; }
-footer a:hover { color:#e8f3e8; }
 
-@media(max-width:1024px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
+footer h3 { 
+    margin-bottom:20px; 
+    font-weight:600; 
+}
+
+footer a { 
+    color:#D8DFE6; 
+    text-decoration:none; 
+    margin:0 15px; 
+    transition: all 0.3s;
+}
+
+footer a:hover { 
+    color:#ffffff;
+}
+
+@media(max-width:1024px) { 
+    .projects-grid { grid-template-columns: repeat(2, 1fr); } 
+}
+
 @media(max-width:768px) { 
     .projects-grid { grid-template-columns: 1fr; } 
     .hero h1 { font-size:2em; } 
-    .about-section { padding:15px 20px; } 
+    .about-section { padding:25px; } 
 }
 </style>
 </head>
@@ -251,7 +260,7 @@ footer a:hover { color:#e8f3e8; }
 <div class="container">
     <section class="about-section">
         <h2>About Me</h2>
-        <p>I'm an Artificial Intelligence intern with a deep passion for Machine Learning and Data Analysis. I love transforming complex data into actionable insights and building intelligent systems that solve real-world problems.</p>
+        <p>I'm an Artificial Intelligence intern with a deep passion for Machine Learning and Data Analysis. I love transforming complex data into actionable insights and building intelligent systems that solve real-world problems. My journey in AI has equipped me with hands-on experience in developing models, analyzing datasets, and implementing cutting-edge ML algorithms.</p>
     </section>
 
     <div class="section-header">
@@ -265,64 +274,37 @@ footer a:hover { color:#e8f3e8; }
     </div>
 
     <div class="projects-grid">
-        <!-- Project 1 -->
         <div class="project-card" data-category="ml">
-            <div class="project-header"></div>
             <h3>Explainability</h3>
             <p>SHAP and XGBoost</p>
-            <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">TensorFlow</span>
-                <span class="tag">CNN</span>
-            </div>
-            <div class="project-links">
-                <a href="#" class="project-link">View Project</a>
-            </div>
+            <div class="project-tags"><span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">CNN</span></div>
+            <div class="project-links"><a href="#" class="project-link">View Project</a></div>
         </div>
 
-        <!-- Project 2 -->
         <div class="project-card" data-category="data">
-            <div class="project-header"></div>
             <h3>LAPD Crime Analysis</h3>
             <p>Explored LAPD crime records to uncover key spatial, temporal, and victim-related patterns.</p>
-            <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">Tableau</span>
-                <span class="tag">Data Visualization</span>
-                <span class="tag">EDA</span>
-            </div>
+            <div class="project-tags"><span class="tag">Python</span><span class="tag">Tableau</span><span class="tag">Data Visualization</span><span class="tag">EDA</span></div>
             <div class="project-links">
                 <a href="https://mahitayadla.github.io/lapd_crime_analysis.html" class="project-link">View Project</a>
                 <a href="https://github.com/mahitayadla/LAPD_crime_data_analysis" class="project-link">View in Github</a>
             </div>
         </div>
 
-        <!-- Project 3 -->
         <div class="project-card" data-category="data">
-            <div class="project-header"></div>
             <h3>Coffee Sales Analysis</h3>
             <p>Interactive Coffee Sales Dashboard in Excel providing insights and trend visualization using Pivot Tables, Charts, and lookup functions.</p>
-            <div class="project-tags">
-                <span class="tag">Excel</span>
-                <span class="tag">Data Visualization</span>
-            </div>
+            <div class="project-tags"><span class="tag">Excel</span><span class="tag">Data Visualization</span></div>
             <div class="project-links">
                 <a href="#" class="project-link">View Project</a>
                 <a href="https://github.com/mahitayadla/coffee-sales-analysis" class="project-link">View in Github</a>
             </div>
         </div>
 
-        <!-- Project 4 -->
         <div class="project-card" data-category="data">
-            <div class="project-header"></div>
             <h3>Customer Churn Analysis</h3>
             <p>This project examines Maven Music’s customer data to understand why users churn and to provide insights that support better retention strategies.</p>
-            <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">Pandas</span>
-                <span class="tag">Numpy</span>
-                <span class="tag">Seaborn</span>
-            </div>
+            <div class="project-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Numpy</span><span class="tag">Seaborn</span></div>
             <div class="project-links">
                 <a href="#" class="project-link">View Project</a>
                 <a href="https://github.com/mahitayadla/maven-music_EDA" class="project-link">View in Github</a>
@@ -333,7 +315,7 @@ footer a:hover { color:#e8f3e8; }
 
 <footer>
     <h3>Contact</h3>
-    <div>
+    <div style="margin:20px 0;">
         <a href="mailto:mahitayadla@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/mahitayadla/">LinkedIn</a>
         <a href="https://github.com/mahitayadla">GitHub</a>
